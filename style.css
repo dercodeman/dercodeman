@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Genos:300&display=swap');
+
+
+@media screen and (min-width:769px) {
+    :root {
+        --max-width: 50rem;
+        --min-width: 30rem;
+        --padding: 1rem;
+        --skew: skew(-.5deg, 1deg);
+    }
+}
+
+@media screen and (max-width:768px) {
+    :root {
+        --max-width: 100%;
+        --min-width: 100%;
+        --padding: .5rem;
+        --skew: skew(-.0deg, 1deg);
+    }
+
+}
+
+:root {
+    --bgmain: rgb(25,20,25);
+    --bgcode: rgba(100, 100, 30, 0.1);
+    --bgquote: rgba(100,100,100,0.1);
+    --fontmain: rgb(245,245,245);
+    --fontcode: rgb(245, 245, 100);
+
+    --codeborder: rgba(230, 230, 150, 0.8);
+    --quoteborder: rgba(200,200,200,0.8);
+    --codeshadow: .2rem .2rem rgba(5,5,0,0.1);
+    --quoteshadow: .2rem .2rem rgba(0,0,0,0.1);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    background-color: var(--bgmain);
+    color: var(--fontmain);
+    font-size: 1.4rem;
+    font-family: 'Genos';
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+}
+
+div#main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: var(--padding);
+}
+
+div.post {
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    align-content: center;
+    border-radius: 1rem;
+    transform: var(--skew);
+}
+
+pre.code {
+    font-size: 18px;
+    font-family: "Courier New";
+    letter-spacing: -.05rem;
+    word-spacing: -.05rem;
+    color: var(--fontcode);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: .8rem;
+    border-left: solid .3rem var(--codeborder);
+    border-radius: 0 1rem 1rem 0rem;
+    background-color: var(--bgcode);
+    box-shadow: var(--codeshadow);
+
+}
+
+p.quote {
+    color: var(--fontquote);
+    padding: .8rem;
+    border-left: solid .3rem var(--quoteborder);
+    border-radius: 0 1rem 1rem 0rem;
+    background-color: var(--bgquote);
+    box-shadow: var(--quoteshadow);
+}
